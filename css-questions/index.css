@@ -1,0 +1,288 @@
+/*
+
+Q1. What is the Box model in css? Which css properties are a part of it?
+A1. A rectangle box is wrapped around every HTML element. The box model is used to determine the height and width of the rectangular box. The CSS Box consists of Width and height (or in the absence of that, default values and the content inside), padding, borders, margin.
+   Content:  Actual Content of the box where the text or image placed.
+  Padding: Area surrounding the content (Space between the border and content).
+  Border: Area surrounding the padding.
+  Margin: Area surrounding the border
+
+
+Q2.What are the advantages of using css?
+A.  The main advantages of CSS are given below:
+
+ Separation of content from presentation - CSS provides a way to present the same content in multiple presentation formats in mobile or desktop or laptop.
+ Easy to maintain - CSS, built effectively can be used to change the look and feel complete by making small changes. To make a global change, simply change the style, and all elements in all the web pages will be updated automatically.
+ Bandwidth - Used effectively, the style sheets will be stored in the browser cache and they can be used on multiple pages, without having to download again. 
+
+
+
+Q3.What are the limitations of css?
+A. Disadvantages of CSS are given below:
+
+ Browser Compatibility: Some style selectors are supported and some are not. We have to determine which style is supported or not using the @support selector).
+ Cross Browser issue: Some selectors behave differently in a different browser).
+ There is no parent selector: Currently, Using CSS, you can’t select a parent tag.
+
+
+Q4. How to include css in the webpage?
+A. There are different ways to include a CSS in a webpage, 
+
+ 1 - External Style Sheet: An external file linked to your HTML document: Using link tag, we can link the style sheet to the HTML page.
+
+  eg    <link rel="stylesheet" type="text/css" href="mystyles.css" />
+
+2-  Embed CSS with a style tag: A set of CSS styles included within your HTML page.
+
+   <style type="text/css">
+
+  /*Add style rules here*/
+
+    /*</style>*
+
+3 - Add inline styles to HTML elements(CSS rules applied directly within an HTML tag.): Style can be added directly to the HTML element using a style tag.
+
+  <h2 style="color:red;background:black">Inline Style</h2>
+
+
+4 - Import a stylesheet file (An external file imported into another CSS file): Another way to add CSS is by using the @import rule. This is to add a new CSS file within CSS itself.
+
+   @import "path/to/style.css"
+
+
+
+
+Q5. What is Vh/Vw in css?
+A.It’s a CSS unit used to measure the height and width in percentage with respect to the viewport. It is used mainly in responsive design techniques. The measure VH is equal to 1/100 of the height of the viewport. If the height of the browser is 1000px, 1vh is equal to 10px. Similarly, if the width is 1000px, then 1 vw is equal to 10px.  
+
+
+Q6.Difference between reset vs normalize css?
+A. Reset CSS: CSS resets aim to remove all built-in browser styling. For example margins, paddings, font-sizes of all elements are reset to be the same. 
+
+  Normalize CSS: Normalize CSS aims to make built-in browser styling consistent across browsers. It also corrects bugs for common browser dependencies
+
+
+Q7. What is the difference between inline, inline-block, and block?
+A.Block Element: The block elements always start on a new line. They will also take space for an entire row or width. List of block elements are <div>, <p>.
+
+ Inline Elements: Inline elements don't start on a new line, they appear on the same line as the content and tags beside them. Some examples of inline elements are <a>, <span> , <strong>, and <img> tags. 
+
+ Inline Block Elements: Inline-block elements are similar to inline elements, except they can have padding and margins and set height and width values
+
+
+Q8. Does margin-top or margin-bottom have an effect on inline elements?
+A. No, it doesn’t affect the inline elements. Inline elements flow with the contents of the page
+
+
+Q9. Explain css position property?
+A. Absolute
+
+To place an element exactly where you want to place it. absolute position is actually set relative to the element's parent. if no parent is available then the relative place to the page itself (it will default all the way back up to the element).
+
+Relative
+
+"Relative to itself". Setting position: relative; on an element and no other positioning attributes, it will no effect on its positioning. It allows the use of z-index on the element and it limits the scope of absolutely positioned child elements. Any child element will be absolutely positioned within that block. 
+
+Fixed
+
+The element is positioned relative to the viewport or the browser window itself. viewport doesn't change if you scroll and hence the fixed element will stay right in the same position. 
+
+Static
+
+Static default for every single page element. The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control.
+
+Sticky
+
+Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
+
+
+Q10. What does DOM reflow occur?
+A.Reflow is the name of the web browser process for re-calculating the positions and geometries of elements in the document, for the purpose of re-rendering part or all of the document. 
+
+Reflow occurs when:
+
+ Insert, remove or update an element in the DOM.
+ Modify content on the page, e.g. the text in an input box.
+ Move a DOM element.
+ Animate a DOM element.
+ Take measurements of an element such as offsetHeight or getComputedStyle.
+ Change a CSS style 
+
+
+Q.11 Different Box Sizing Property?
+A. The box-sizing CSS property sets how the total width and height of an element are calculated.
+
+ Content-box: The default width and height values apply to the element's content only. The padding and border are added to the outside of the box.
+
+ Padding-box: Width and height values apply to the element's content and its padding. The border is added to the outside of the box. Currently, only Firefox supports the padding-box value.
+
+ Border-box: Width and height values apply to the content, padding, and border
+
+
+
+Q.12Can you name the four types of @media properties?
+A. The four types of @media properties are:
+
+ All → It’s the default property. Used for all media-type devices.
+ Screen → Used for computer screen, mobile screen.
+ Print → Used for printers.
+ Speech → Used for screen readers.
+
+
+
+Q13. What is the grid system?
+A. CSS Grid Layout is the most powerful layout system available in CSS. It is said to be a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system 
+
+
+
+Q14.What are the different ways to hide the element using CSS?
+A. Using display property(display: none). It’s not available for screen readers. The element will not exist in the DOM if display: none is used.
+
+ Using visibility property(visibility: hidden), will take up the space of the element. It will be available to screen reader users. The element will actually be present in the DOM, but not shown on the screen.
+
+ Using position property (position: absolute). Make it available outside the screen.
+
+
+Q15.What does the :root pseudo-class refer to?
+A. The :root selector allows you to target the highest-level “parent” element in the DOM, or document tree. It is defined in the CSS Selectors Level 3 specification.
+
+
+Q16.Difference between CSS grid vs flexbox?
+A. CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows. Grid layout is intended for larger-scale layouts which aren’t linear in design.
+
+ Flexbox is largely a one-dimensional system (either in a column or a row). Flexbox layout is most appropriate to the components of an application
+
+
+Q17.What are the advantages of using translate() instead of absolute position?
+A. Translate() does not cause the browser to trigger repaint and layout and instead only acts on the compositor. The absolute position triggers the repaint or DOM reflow. So, translate() gives the better performance
+
+
+
+Q18.Explain the term Responsive web design.
+
+A. It is a method in which we design and develop a web page according to the user activities and conditions which are based on various components like the size of the screen, portability of the web page on the different devices, etc. It is done by using different flexible layouts and grids
+
+
+
+Q19. How do we make a rounded corner by using CSS?
+
+A. We can make a rounded corner by using the property “border-radius”. We can apply this property to any element.
+
+
+
+Q20.What are gradients in CSS?
+
+A. It is a property of CSS which allows you to display a smooth transformation between two or more than two specified colors.
+
+ There are two types of gradients that are present in CSS. They are:
+
+ Linear Gradient
+ Radial Gradient
+
+
+
+Q21.How can we add icons to the web page?
+
+A. We can add icons to the HTML webpage by using an icon library like font-awesome.
+
+ We have to add the name of the given icon class to any inline HTML element. (<i> or <span>) . Icons in the icon libraries are scalable vectors that can be customized with CSS.
+
+
+
+Q22.Explain the concept of pseudo-elements in CSS.
+
+A. It is a feature of CSS which is used to style the given parts of an element.
+
+ For Example, we can style the first letter or line of an HTML element.
+
+ selector::pseudo-element {
+ property:value;
+ }
+
+
+Q23.Differentiate between the ID and class.
+
+A. Both ID and class is been used in HTML and assigns the value from CSS.
+
+ Please find below the differences:
+
+ The ID is a kind of element which uniquely assigns a name to a particular element whereas class has an element with a certain set of properties that can be used for the complete block.
+ The id can be used as an element because it can uniquely identify it whereas class is also defined to block the elements and applies too many tags wherever it is used.
+ ID provides the restriction to use its properties to one specific element whereas in class the inheritance is applied to a specific block or group of the element.
+
+
+Q24.What is the use of CSS Opacity?
+A. The CSS opacity property is used to specify the transparency of an element. In simple word, you can say that it specifies the clarity of the image. In technical terms, Opacity is defined as the degree to which light is allowed to travel through an object. For example:
+
+ <style>    
+ img.trans {    
+    opacity: 0.4;    
+    filter: alpha(opacity=40); /* For IE8 and earlier */    
+   /* }*/   
+/*</style>  
+
+
+
+Q25.Explain universal selector.
+A. The universal selector matches the name of any of the element type instead of selecting elements of a specific type.
+
+ <style>    
+* {    
+   color: green;    
+   font-size: 20px;    
+ }     
+ </style>    
+
+
+Q26.Name the property for controlling the image position in the background.
+A.The background-position property is used to define the initial position of the background image. By default, the background image is placed on the top-left of the webpage.
+
+ You can set the following positions:
+
+ center
+ top
+ bottom
+ left
+ right
+ background: white url('good-morning.jpg');  
+ background-repeat: no-repeat;  
+ background-attachment: fixed;  
+ background-position: center;   
+
+
+
+Q27.What are the advantages of External Style Sheets?
+A. You can create classes for reusing it in many documents.
+ By using it, you can control the styles of multiple documents from one file.
+ In complex situations, you can use selectors and grouping methods to apply styles
+
+
+Q28.What is the float property of CSS?
+A.The CSS float property is used to move the image to the right or left along with the texts to be wrapped around it. It doesn't change the property of the elements used before it.
+
+ To understand its purpose and origin, let's take a look at its print display. In the print display, an image is set into the page such that text wraps around it as needed.
+
+
+Q29.What is the purpose of the z-index and how is it used?
+A.The z-index helps to specify the stack order of positioned elements that may overlap one another. The z-index default value is zero and can take on either a positive or negative number.
+
+ An element with a higher z-index is always stacked above than a lower index.
+
+ Z-Index can take the following values:
+
+ Auto: Sets the stack order equal to its parents.
+ Number: Orders the stack order.
+ Initial: Sets this property to its default value (0).
+ Inherit: Inherits this property from its parent element.
+
+
+
+Q30.What is the difference between CSS2 and CSS3?
+A. The main difference between CSS2 and CSS3 is that CSS3 is divided into different sections which are also known as modules. Unlike CSS2, CSS3 modules are supported by many browsers.
+
+ Apart from that, CSS3 contains new General Sibling Combinators which is responsible for matching the sibling elements with the given elements.
+
+
+
+
+*/
